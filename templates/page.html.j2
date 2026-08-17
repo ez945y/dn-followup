@@ -79,7 +79,7 @@
   a { color: var(--accent); }
 </style>
 </head>
-<body data-to="{{ contact_email }}">
+<body data-to="{{ contact_email }}" data-cc="{{ cc_email }}">
 <div class="wrap">
 
   <div class="card">
@@ -117,7 +117,10 @@
 
     <div class="field">
       <label>收件人</label>
-      <div class="to">{{ our_company }} &lt;{{ contact_email }}&gt;</div>
+      <div class="to">
+        {{ our_company }} &lt;{{ contact_email }}&gt;
+        {% if cc_email %}<div class="muted small">副本：{{ cc_email }}</div>{% endif %}
+      </div>
     </div>
 
     <div class="field">
@@ -164,6 +167,7 @@
 
 <script>
   var to = document.body.dataset.to;
+  var cc = document.body.dataset.cc;
   var subjectEl = document.getElementById('subject');
   var bodyEl = document.getElementById('body');
   var statusEl = document.getElementById('status');
@@ -178,6 +182,7 @@
   document.getElementById('gmail').addEventListener('click', function () {
     var url = 'https://mail.google.com/mail/?view=cm&fs=1'
       + '&to=' + encodeURIComponent(to)
+      + (cc ? '&cc=' + encodeURIComponent(cc) : '')
       + '&su=' + encodeURIComponent(subjectEl.value)
       + '&body=' + encodeURIComponent(bodyEl.value);
     window.open(url, '_blank', 'noopener');
@@ -186,6 +191,7 @@
   document.getElementById('mailto').addEventListener('click', function () {
     window.location.href = 'mailto:' + encodeURIComponent(to)
       + '?subject=' + encodeURIComponent(subjectEl.value)
+      + (cc ? '&cc=' + encodeURIComponent(cc) : '')
       + '&body=' + encodeURIComponent(bodyEl.value);
   });
 

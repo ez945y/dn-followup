@@ -51,8 +51,9 @@ PEOPLE: list[Person] = [
 
 @dataclass(frozen=True)
 class Profile:
-    # 對方按下按鈕後，信會寄到這裡 — 分享頁面前請先確認
+    # 對方按下按鈕後，信會寄到這裡；cc 留空就不帶副本
     email: str = os.getenv("CONTACT_EMAIL", "reed@devicenexus.ai")
+    cc_email: str = os.getenv("CONTACT_CC", "mike@devicenexus.ai")
     company: str = os.getenv("COMPANY_NAME", "DeviceNexus")
     website: str = os.getenv("COMPANY_WEBSITE", "https://devicenexus.ai")
     calendly_url: str = os.getenv("CALENDLY_URL", "https://calendly.com/ez945y/30min")

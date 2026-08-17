@@ -30,6 +30,7 @@ def context() -> dict:
     return {
         "people": profile.people,
         "contact_email": profile.email,
+        "cc_email": profile.cc_email,
         "our_company": profile.company,
         "website": profile.website,
         "calendly_url": profile.calendly_url,
@@ -60,7 +61,8 @@ def page():
 def draft():
     """Same draft as plain text — handy for checking wording without the page."""
     subject, body = render_draft(context())
-    return f"To: {profile.email}\nSubject: {subject}\n\n{body}\n"
+    cc = f"Cc: {profile.cc_email}\n" if profile.cc_email else ""
+    return f"To: {profile.email}\n{cc}Subject: {subject}\n\n{body}\n"
 
 
 @app.get("/health")
