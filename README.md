@@ -78,10 +78,10 @@ GitHub 上到 **Settings → Pages → Source: Deploy from a branch → `main` /
 
 要英文版就複製一份 `draft.*.j2` 改成英文，在 `main.py` 依 `?lang=` 選檔名即可。
 
-## 上線前要確認
+## 幾件要知道的事
 
-- **`CONTACT_EMAIL` 目前預設是 `reed@devicenexus.ai`，這是我猜的，請先確認再分享出去** ——
-  這是對方按下按鈕後信會寄到的地方，寫錯信就掉了。
-- Mike 的職稱目前是空的（`PEOPLE` 裡的 `title=""`），補上去才會顯示。
+- 收件人是 `reed@devicenexus.ai`，副本 `mike@devicenexus.ai`（`CONTACT_EMAIL` / `CONTACT_CC`）。
 - Calendly `https://calendly.com/ez945y/30min` 已確認可以被 iframe 嵌入（`x-frame-options: ALLOWALL`）。
-- 部署時記得掛 HTTPS；頁面有 `noindex`，不會被搜尋引擎收錄。
+- 頁面有 `noindex`，不會被搜尋引擎收錄；但 repo 是 public，兩個信箱在原始碼裡看得到，
+  被爬信箱是可能的。介意的話就把 repo 轉私有（Pages 私有 repo 需要付費方案）。
+- 頁面是靜態的，沒有後端、不收集任何資料，對方按下按鈕之前我們不會知道他來過。
