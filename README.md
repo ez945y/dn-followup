@@ -33,6 +33,15 @@ uvicorn app.main:app --reload
 
 `/draft` 會用純文字回同一份草稿，方便你自己校字。
 
+## 線上網址
+
+**https://piyagu.com/dn-followup/** （repo: https://github.com/ez945y/dn-followup ）
+
+`https://ez945y.github.io/dn-followup/` 也可以，會自動導到上面那個網址 ——
+因為這個 GitHub 帳號的 Pages 已經綁了 `piyagu.com` 這個自訂網域，專案頁面就跟著掛在底下。
+想換成 `devicenexus.ai` 的子網域，在 repo 的 Settings → Pages 設 custom domain，
+再去 DNS 加一筆 CNAME 指到 `ez945y.github.io`。
+
 ## 上線：GitHub Pages
 
 頁面在使用者打開時沒有任何伺服器邏輯（內容都來自 `config.py`，按鈕是純 JS），
