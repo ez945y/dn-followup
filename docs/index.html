@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>台灣機器人年會後續 — DeviceNexus</title>
+<style>
+  :root {
+    --ink: #1a1d21;
+    --muted: #5b6169;
+    --line: #e4e7ea;
+    --accent: #1f6feb;
+    --bg: #f4f6f8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei",
+                 Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
+  .card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+  }
+  .eyebrow { font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin: 0 0 10px; }
+  h1 { font-size: 26px; line-height: 1.4; margin: 0 0 14px; }
+  h2 { font-size: 18px; margin: 0 0 12px; }
+  p { margin: 0 0 14px; }
+  .muted { color: var(--muted); }
+  .small { font-size: 14px; }
+  .who { display: flex; gap: 14px; align-items: center; border-top: 1px solid var(--line); padding-top: 18px; margin-top: 18px; }
+  .avatar {
+    width: 46px; height: 46px; border-radius: 50%; flex: 0 0 46px;
+    background: var(--accent); color: #fff; font-weight: 600;
+    display: flex; align-items: center; justify-content: center;
+  }
+  ul { margin: 0 0 4px; padding-left: 20px; }
+  li { margin-bottom: 8px; }
+  label { display: block; font-size: 13px; font-weight: 600; color: var(--muted); margin-bottom: 6px; }
+  .field { margin-bottom: 18px; }
+  .to {
+    background: #f7f9fb; border: 1px solid var(--line); border-radius: 8px;
+    padding: 10px 12px; font-size: 15px;
+  }
+  input[type=text], textarea {
+    width: 100%; padding: 12px; border: 1px solid var(--line); border-radius: 8px;
+    font-family: inherit; font-size: 15px; line-height: 1.7; color: var(--ink);
+    background: #fff; resize: vertical;
+  }
+  input[type=text]:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: -1px; border-color: var(--accent); }
+  textarea { min-height: 320px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .btn {
+    display: inline-block; border: 1px solid var(--accent); background: var(--accent); color: #fff;
+    border-radius: 8px; padding: 12px 20px; font-size: 15px; font-weight: 600;
+    text-decoration: none; cursor: pointer; font-family: inherit;
+  }
+  .btn:hover { filter: brightness(1.08); }
+  .btn.secondary { background: #fff; color: var(--accent); }
+  .hint { font-size: 13px; color: var(--muted); margin: 12px 0 0; }
+  .embed { border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: #fff; }
+  iframe { display: block; width: 100%; height: 700px; border: 0; }
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .card { padding: 22px 18px; }
+    iframe { height: 940px; }
+    .actions .btn { flex: 1 1 100%; text-align: center; }
+  }
+  footer { text-align: center; color: var(--muted); font-size: 13px; padding-top: 8px; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body data-to="reed@devicenexus.ai">
+<div class="wrap">
+
+  <div class="card">
+    <p class="eyebrow">台灣機器人年會</p>
+    <h1>很高興在會場遇到您</h1>
+    <p>我們提供跨硬體的裝置維運基礎建設，專注解決設備建置時間與安全管理的痛點。</p>
+    <ul>
+      <li>極速部署：刷機時間縮短至 8 到 9 分鐘</li>
+      <li>OTA 更新：分批推送韌體與模型，完整支援新舊版 Jetson</li>
+      <li>遠端存取：不用派人到場，就能直接連線重現問題與除錯</li>
+    </ul>
+    <div class="who">
+      <div class="avatar">RG</div>
+      <div>
+        <div><strong>Reed Giovannetti</strong></div>
+<div class="muted small">Co-founder &amp; CEO at DeviceNexus</div><div class="muted small">Physical AI infra &amp; endpoint ops | OEM Whisperer</div>        <div class="small">
+          <a href="https://www.linkedin.com/in/reed-giovannetti/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+      </div>
+    </div>
+    <div class="who">
+      <div class="avatar">MC</div>
+      <div>
+        <div><strong>Mike Chen</strong></div>
+<div class="muted small">FDE at DeviceNexus</div>        <div class="small">
+          <a href="https://www.linkedin.com/in/mikechenyz/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>① 這封信是幫您擬好的草稿</h2>
+    <p class="muted small">
+      您可以直接在這裡修改，按下按鈕會在 Gmail 開一封已經填好的信，
+      送出之前還可以再改，確認 OK 再由您寄出。
+    </p>
+
+    <div class="field">
+      <label>收件人</label>
+      <div class="to">DeviceNexus &lt;reed@devicenexus.ai&gt;</div>
+    </div>
+
+    <div class="field">
+      <label for="subject">主旨</label>
+      <input type="text" id="subject" value="關於台灣機器人年會交流，想進一步了解你們的方案">
+    </div>
+
+    <div class="field">
+      <label for="body">內文</label>
+      <textarea id="body" spellcheck="false">您好，
+
+很高興在台灣機器人年會與你們交流。
+
+你們提到的幾個重點我印象很深：
+
+- 刷機時間可以縮短到 8 到 9 分鐘
+- 能支援跨硬體的 OTA 更新，而且可分批推送韌體與模型
+- 不用到場也能遠端連線排查問題、完成除錯
+
+這些能力正好對我們目前在設備部署與維運上的需求很有參考價值。
+
+希望可以找時間進一步了解你們的方案，也想看看是否有機會合作。
+
+如果方便，請回覆一個適合的時間，或直接提供會議預約連結，我們再配合安排。
+
+[您的姓名]
+[公司名稱]</textarea>
+    </div>
+
+    <div class="actions">
+      <button class="btn" id="gmail" type="button">在 Gmail 開啟並寄出</button>
+      <button class="btn secondary" id="mailto" type="button">用我自己的郵件軟體</button>
+      <button class="btn secondary" id="copy" type="button">複製內容</button>
+    </div>
+    <p class="hint" id="status">按「在 Gmail 開啟」會另開分頁，需要先登入 Gmail。信不會自動寄出，一定要您自己按送出。</p>
+  </div>
+
+  <div class="card">
+    <h2>② 或者直接約個 30 分鐘</h2>
+    <p class="muted small">不想打字的話，挑一個您方便的時段就好。</p>
+    <div class="embed">
+      <iframe src="https://calendly.com/ez945y/30min?hide_gdpr_banner=1" title="Book a meeting" loading="lazy"></iframe>
+    </div>
+    <p class="hint">上面沒有正常顯示的話，<a href="https://calendly.com/ez945y/30min" target="_blank" rel="noopener">點這裡開 Calendly</a>。</p>
+  </div>
+
+  <footer>
+    DeviceNexus ·
+    <a href="mailto:reed@devicenexus.ai">reed@devicenexus.ai</a> ·
+    <a href="https://devicenexus.ai" target="_blank" rel="noopener">https://devicenexus.ai</a>
+    <div>
+      <a href="https://www.linkedin.com/in/reed-giovannetti/" target="_blank" rel="noopener">Reed Giovannetti 的 LinkedIn</a>
+ ·       <a href="https://www.linkedin.com/in/mikechenyz/" target="_blank" rel="noopener">Mike Chen 的 LinkedIn</a>
+    </div>
+  </footer>
+</div>
+
+<script>
+  var to = document.body.dataset.to;
+  var subjectEl = document.getElementById('subject');
+  var bodyEl = document.getElementById('body');
+  var statusEl = document.getElementById('status');
+
+  function grow() {
+    bodyEl.style.height = 'auto';
+    bodyEl.style.height = Math.max(320, bodyEl.scrollHeight + 4) + 'px';
+  }
+  bodyEl.addEventListener('input', grow);
+  window.addEventListener('load', grow);
+
+  document.getElementById('gmail').addEventListener('click', function () {
+    var url = 'https://mail.google.com/mail/?view=cm&fs=1'
+      + '&to=' + encodeURIComponent(to)
+      + '&su=' + encodeURIComponent(subjectEl.value)
+      + '&body=' + encodeURIComponent(bodyEl.value);
+    window.open(url, '_blank', 'noopener');
+  });
+
+  document.getElementById('mailto').addEventListener('click', function () {
+    window.location.href = 'mailto:' + encodeURIComponent(to)
+      + '?subject=' + encodeURIComponent(subjectEl.value)
+      + '&body=' + encodeURIComponent(bodyEl.value);
+  });
+
+  document.getElementById('copy').addEventListener('click', function () {
+    var text = subjectEl.value + '\n\n' + bodyEl.value;
+    var done = function () { statusEl.textContent = '已複製，貼到你的信箱就可以了。'; };
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text).then(done, function () { bodyEl.select(); });
+    } else {
+      bodyEl.select();
+      document.execCommand('copy');
+      done();
+    }
+  });
+</script>
+</body>
+</html>
